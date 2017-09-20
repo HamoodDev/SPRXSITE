@@ -7,8 +7,8 @@
 	if( isset( $_SESSION['username'] ) ){
 	    $DB->DB = new PDO('mysql:host='.HOST.';dbname='. DBNAME.'', USER, PASS);
 		$id = $_POST['id'];
-		$DB->IOG("Banned User [". $DB->GetUSER("username", $id) ."]");
-		$statement = $DB->DB->prepare( "UPDATE `users` SET `rank` = '0' WHERE `id` = '$id'" );
+		$DB->IOG("Un-Banned User [". $DB->GetUSER("username", $id) ."]");
+		$statement = $DB->DB->prepare( "UPDATE `users` SET `rank` = '1' WHERE `id` = '$id'" );
     	$statement->execute();
     }
 ?>
