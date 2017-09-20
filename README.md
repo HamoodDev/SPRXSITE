@@ -5,7 +5,8 @@ do not use this atm, fixing bugs!
 The code written by me (HamoodDev) is licensed under the 2-clause BSD. Copyright (c) 2017, HamoodDev
 
 # Requirements
-To run you'll need a live server.
+Live server.
+PHP5.
 
 # How to ?
 - Upload files to your server .
