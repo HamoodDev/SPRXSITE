@@ -7,8 +7,8 @@
     define("SiteURL", "http://localhost/DevSite", TRUE);
     define("SiteEmail", "admin@localhost.com", TRUE);
 	
-    define("HOST", "localhost");
-    define("USER", "root");
-    define("PASS", "");
-    define("DBNAME", "devsite");
+	define("HOST", "localhost");
+	define("USER", "root");
+	define("PASS", "");
+	define("DBNAME", "devsite");
 ?>
