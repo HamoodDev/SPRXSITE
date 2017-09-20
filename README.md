@@ -1,5 +1,4 @@
-# DevSite
-do not use this atm, fixing bugs!
+# DevSite |SPRX WEBSITE|PHP|
 
 # License
 The code written by me (HamoodDev) is licensed under the 2-clause BSD. Copyright (c) 2017, HamoodDev
