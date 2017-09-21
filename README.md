@@ -26,5 +26,5 @@
 - More things to come soon! <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f609.png.pagespeed.ic.wF21YceKxu.png" height="20" width="20">
 
 # Contact
-- <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Skype-icon.png" height="20" width="20">
-<a href="skype:HamoodDev?chat" class="text text-primary"> Skype</a>
+- <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Skype-icon.png" height="20" width="20"> Skype
+- <img src="http://www.iconninja.com/files/245/45/195/facebook-media-social-like-network-fb-icon.svg" height="20" width="20"> Facebook
