@@ -26,4 +26,4 @@
 - More things to come soon! <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f609.png.pagespeed.ic.wF21YceKxu.png" height="20" width="20">
 
 # Contact
-- Skype: HamoodDev
+- <span class="fa fa-skype"></span> Skype: HamoodDev
