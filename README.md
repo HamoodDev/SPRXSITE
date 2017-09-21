@@ -9,6 +9,7 @@ PHP5.
 
 # How to ?
 - Upload files to your server .
+- Extract /plugins/plugins.rar in /plugins/ folder.
 - Create a database and edit (config/configs.php) with your database informations.
 - Navigate to https://your_website_url.com/ and login now.
 
