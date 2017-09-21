@@ -26,4 +26,4 @@
 - More things to come soon! <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f609.png.pagespeed.ic.wF21YceKxu.png" height="20" width="20">
 
 # Contact
-- Skype <a href="skype:HamoodDev" target="_blank"> <img src="http://iconshow.me/media/images/logo/brand-logo-icon/png/512/skype-512.png" height="20" width="20"/> </a>
+- Skype <a href="skype:HamoodDev"> <img src="http://iconshow.me/media/images/logo/brand-logo-icon/png/512/skype-512.png" height="20" width="20"/> HamoodDev</a>
