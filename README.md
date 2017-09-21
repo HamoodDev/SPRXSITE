@@ -26,4 +26,4 @@
 - More things to come soon! <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f609.png.pagespeed.ic.wF21YceKxu.png" height="20" width="20">
 
 # Contact
-- <i class="fa fa-skype" aria-hidden="true"></i> Skype: HamoodDev
+- <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Skype-icon.png" height="20" width="20"> Skype: HamoodDev
