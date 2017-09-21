@@ -26,4 +26,16 @@
 - More things to come soon! <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f609.png.pagespeed.ic.wF21YceKxu.png" height="20" width="20">
 
 # Contact
-- <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Skype-icon.png" height="20" width="20"> Skype: HamoodDev
+- Skype <img src="http://iconshow.me/media/images/logo/brand-logo-icon/png/512/skype-512.png" height="20" width="20">
+
+
+<script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+<div id="SkypeButton_Call_HamoodDev_1">
+ <script type="text/javascript">
+ Skype.ui({
+ "name": "dropdown",
+ "element": "SkypeButton_Chat_HamoodDev_1",
+ "participants": ["HamoodDev"]
+ });
+ </script>
+</div>
