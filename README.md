@@ -23,7 +23,7 @@
 
 # Read This!
 - ITS NOT THE PERFECT SITE, IM STILL WORKING ON IT!
-- More things to come soon! <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f609.png.pagespeed.ic.wF21YceKxu.png">
+- More things to come soon! <img src="https://www.emojibase.com/resources/img/emojis/apple/x1f609.png.pagespeed.ic.wF21YceKxu.png" height="20" width="20">
 
 # Contact
 - Skype: HamoodDev
