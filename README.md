@@ -27,4 +27,4 @@
 
 # Contact
 - <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Skype-icon.png" height="20" width="20">
-<a href="http://skype:HamoodDev?chat" class="text text-primary"> Skype</a>
+<a href="skype:HamoodDev?chat" class="text text-primary"> Skype</a>
