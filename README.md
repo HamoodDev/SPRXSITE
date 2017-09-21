@@ -27,4 +27,4 @@
 
 # Contact
 - <img src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Skype-icon.png" height="20" width="20"> Skype
-- <img src="http://www.iconninja.com/files/245/45/195/facebook-media-social-like-network-fb-icon.svg" height="20" width="20"> Facebook
+- <img src="http://www.iconninja.com/files/245/45/195/facebook-media-social-like-network-fb-icon.svg" height="20" width="20"> <a href="http://facebook.com/HamoodDev" target="_blank">Facebook</a>
