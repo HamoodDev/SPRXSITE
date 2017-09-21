@@ -1,4 +1,4 @@
-# DevSite |SPRX WEBSITE|PHP|
+# Sprx Website |PHP|
 
 # License
 The code written by me (HamoodDev) is licensed under the 2-clause BSD. Copyright (c) 2017, HamoodDev
