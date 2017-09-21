@@ -11,6 +11,7 @@ PHP5.
 - Upload files to your server .
 - Extract /plugins/plugins.rar in /plugins/ folder.
 - Create a database and edit (config/configs.php) with your database informations.
+- When created the database, import file (database_.sql).
 - Navigate to https://your_website_url.com/ and login now.
 
 # To do:
