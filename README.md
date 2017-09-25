@@ -7,7 +7,6 @@
 
 # Requirements
 - Live server.
-- PHP5.
 
 # Installation
 - Upload files to your server .
