@@ -260,7 +260,6 @@
                 </div>";
 	          } 
 	          ?>
-			  <?php var_dump($_SESSION); ?>
               </div>
 			  <?php if($ID == $_SESSION['id']) { ?>
               <div class="tab-pane" id="settings">
