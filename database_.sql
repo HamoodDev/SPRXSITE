@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6
--- https://www.phpmyadmin.net/
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
 --
--- Host: mysql3.blazingfast.io:3306
--- Generation Time: Aug 14, 2017 at 08:51 AM
--- Server version: 10.1.22-MariaDB-1~xenial
--- PHP Version: 5.6.30
+-- Host: localhost
+-- Generation Time: Sep 25, 2017 at 12:55 PM
+-- Server version: 5.7.19-0ubuntu0.16.04.1
+-- PHP Version: 7.0.23-1+ubuntu16.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hamoodde_testarea`
+-- Database: `sitedatatest`
 --
 
 -- --------------------------------------------------------
@@ -43,16 +43,8 @@ CREATE TABLE `bugs` (
   `Author` varchar(45) NOT NULL,
   `Title` varchar(55) NOT NULL,
   `Text` varchar(255) NOT NULL,
-  `DateTime` datetime(6) NOT NULL
+  `DateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `bugs`
---
-
-INSERT INTO `bugs` (`id`, `Author`, `Title`, `Text`, `DateTime`) VALUES
-(19, 'HamoodDev', 'Test', 'TEst', '2017-08-09 04:24:24.415384'),
-(20, 'Tester', 'test', 'test', '2017-08-09 10:15:01.000000');
 
 -- --------------------------------------------------------
 
@@ -66,14 +58,6 @@ CREATE TABLE `changelog` (
   `Text` varchar(550) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `changelog`
---
-
-INSERT INTO `changelog` (`id`, `version`, `Text`) VALUES
-(0, '0.5', 'TSET'),
-(15, '1.0', 'test');
-
 -- --------------------------------------------------------
 
 --
@@ -84,7 +68,7 @@ CREATE TABLE `chat` (
   `id` int(11) NOT NULL,
   `poster` varchar(40) NOT NULL,
   `message` varchar(255) DEFAULT NULL,
-  `datet` timestamp NULL DEFAULT NULL
+  `datet` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -92,8 +76,7 @@ CREATE TABLE `chat` (
 --
 
 INSERT INTO `chat` (`id`, `poster`, `message`, `datet`) VALUES
-(300, 'BOT', 'Chat Has Been Pruned!', '2017-08-07 06:17:23'),
-(301, 'test', '<i>This Message Has Been Removed.</i>', '2017-08-09 08:04:27');
+(308, 'BOT', 'Welcome To Your Chat! :)  :thumpsup:', '2017-09-25 12:18:51');
 
 -- --------------------------------------------------------
 
@@ -115,7 +98,7 @@ INSERT INTO `custom_settings` (`id`, `name`, `enabled`) VALUES
 (0, 'MOTD', 'Our Official Chat!'),
 (1, 'DisableLogins', '0'),
 (2, 'DisablePurchases', '1'),
-(3, 'PaypalEmail', 'hamooddev@gmail.com');
+(3, 'PaypalEmail', 'admin@admin.com');
 
 -- --------------------------------------------------------
 
@@ -130,13 +113,6 @@ CREATE TABLE `downloads` (
   `type` varchar(10) NOT NULL,
   `Version` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `downloads`
---
-
-INSERT INTO `downloads` (`id`, `filename`, `size`, `type`, `Version`) VALUES
-(15, 'New Text Document', '0', 'txt', '1.0');
 
 -- --------------------------------------------------------
 
@@ -208,124 +184,6 @@ CREATE TABLE `login_history` (
   `DateTime` datetime(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `login_history`
---
-
-INSERT INTO `login_history` (`username`, `ip`, `type`, `DateTime`) VALUES
-('', '185.96.70.127', 'PC Login', '2017-07-24 03:10:58.000000'),
-('HamoodDev', '185.96.70.127', 'PC Login', '2017-07-24 03:11:46.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-24 03:19:55.000000'),
-('PBMODZ', '', 'PC Login', '2017-07-24 04:10:56.000000'),
-('PBMODZ', '', 'PC Login', '2017-07-24 04:10:56.000000'),
-('PBMODZ', '', 'PC Login', '2017-07-24 04:10:57.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-24 04:34:08.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-25 06:22:36.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-25 06:45:11.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 04:26:24.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 05:17:35.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 06:32:40.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 04:51:32.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 04:51:33.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 05:49:36.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 11:09:43.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 04:23:23.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-26 04:23:23.000000'),
-('Jason', '', 'PC Login', '2017-07-26 09:23:21.000000'),
-('Jason', '', 'PC Login', '2017-07-27 08:05:34.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-27 08:05:42.000000'),
-('HamoodDev', '', 'PC Login', '2017-07-29 04:13:08.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-03 04:23:07.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-03 04:25:07.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-03 04:25:07.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-03 04:25:08.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:01:22.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:20:12.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:20:39.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:22:30.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:23:57.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:24:45.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:25:21.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:25:39.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:26:14.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:26:50.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:27:34.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:28:31.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:29:19.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:30:00.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:30:27.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:35:02.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:35:21.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:38:21.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:38:35.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:39:07.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:40:06.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:41:29.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:42:49.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:43:53.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-07 08:44:36.000000'),
-('Tester', '', 'PC Login', '2017-08-08 05:49:43.000000'),
-('Tester', '', 'PC Login', '2017-08-08 05:49:51.000000'),
-('Tester', '', 'PC Login', '2017-08-08 05:50:42.000000'),
-('Tester', '', 'PC Login', '2017-08-08 05:50:42.000000'),
-('Tester', '', 'PC Login', '2017-08-08 05:50:43.000000'),
-('Tester', '', 'PC Login', '2017-08-08 05:50:43.000000'),
-('Tester', '', 'PC Login', '2017-08-08 06:10:37.000000'),
-('Tester', '', 'PC Login', '2017-08-08 06:13:26.000000'),
-('Tester', '', 'PC Login', '2017-08-08 06:13:57.000000'),
-('Tester', '', 'PC Login', '2017-08-08 02:30:38.000000'),
-('Tester', '', 'PC Login', '2017-08-08 02:30:53.000000'),
-('Tester', '', 'PC Login', '2017-08-08 02:30:59.000000'),
-('Tester', '', 'PC Login', '2017-08-08 02:32:23.000000'),
-('Tester', '', 'PC Login', '2017-08-08 02:32:32.000000'),
-('Tester', '', 'PC Login', '2017-08-08 04:09:33.000000'),
-('Tester', '', 'PC Login', '2017-08-08 04:10:49.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-08 07:38:54.000000'),
-('Tester', '', 'PC Login', '2017-08-08 07:48:35.000000'),
-('Tester', '', 'PC Login', '2017-08-08 07:48:40.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-08 08:49:04.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-09 08:09:16.000000'),
-('', '', 'PC Login', '2017-08-09 08:28:41.000000'),
-('', '', 'PC Login', '2017-08-09 08:33:03.000000'),
-('', '', 'PC Login', '2017-08-09 08:33:34.000000'),
-('', '', 'PC Login', '2017-08-09 08:33:39.000000'),
-('', '', 'PC Login', '2017-08-09 08:34:01.000000'),
-('', '', 'PC Login', '2017-08-09 08:44:00.000000'),
-('', '', 'PC Login', '2017-08-09 08:45:34.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-09 08:53:21.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-09 09:18:57.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-09 09:20:55.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-09 09:22:05.000000'),
-('', '', 'PC Login', '2017-08-09 09:22:18.000000'),
-('test', '', 'PC Login', '2017-08-09 09:39:13.000000'),
-('test', '', 'PC Login', '2017-08-09 09:40:42.000000'),
-('test', '', 'PC Login', '2017-08-09 09:41:03.000000'),
-('test', '', 'PC Login', '2017-08-09 09:41:49.000000'),
-('test', '', 'PC Login', '2017-08-09 09:44:43.000000'),
-('test', '', 'PC Login', '2017-08-09 09:44:53.000000'),
-('test', '', 'PC Login', '2017-08-09 09:45:06.000000'),
-('test', '', 'PC Login', '2017-08-09 09:45:42.000000'),
-('test', '', 'PC Login', '2017-08-09 09:46:15.000000'),
-('test', '', 'PC Login', '2017-08-09 09:49:49.000000'),
-('test', '', 'PC Login', '2017-08-09 09:54:13.000000'),
-('test', '', 'PC Login', '2017-08-09 09:55:55.000000'),
-('Tester', '', 'PC Login', '2017-08-09 10:14:31.000000'),
-('Tester', '', 'PC Login', '2017-08-09 06:11:05.000000'),
-('Tester', '', 'PC Login', '2017-08-09 06:11:23.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:00:20.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:00:52.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:01:16.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:01:16.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:01:40.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:01:55.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:01:58.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:02:10.000000'),
-('Tester', '', 'PC Login', '2017-08-09 09:03:14.000000'),
-('Tester', '', 'PC Login', '2017-08-10 01:02:41.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-10 07:20:22.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-10 07:20:22.000000'),
-('HamoodDev', '', 'PC Login', '2017-08-10 07:20:22.000000');
-
 -- --------------------------------------------------------
 
 --
@@ -338,23 +196,6 @@ CREATE TABLE `logs` (
   `DateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `type` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `logs`
---
-
-INSERT INTO `logs` (`username`, `action`, `DateTime`, `type`) VALUES
-('HamoodDev', 'Created User [Jason]', '2017-07-26 20:17:15', 'log'),
-('HamoodDev', 'Edited User [] Changed Rank From [] to [4]', '2017-07-28 00:06:10', 'log'),
-('HamoodDev', 'Edited User [] Changed Rank From [] to [1]', '2017-07-28 00:06:17', 'log'),
-('HamoodDev', 'Edited User [] Changed Rank From [] to [2]', '2017-07-28 00:06:21', 'log'),
-('HamoodDev', 'Banned User []', '2017-07-28 00:06:23', 'log'),
-('HamoodDev', 'Edited User [] Changed Rank From [] to [4]', '2017-07-28 00:06:36', 'log'),
-('HamoodDev', 'Created User [Tester]', '2017-08-08 01:45:16', 'log'),
-('HamoodDev', 'Edited User [] Changed Rank From [] to [1]', '2017-08-08 01:46:22', 'log'),
-('HamoodDev', 'Edited User [BLOODY REIGNS] Changed Rank From [3] to [1]', '2017-08-08 01:46:40', 'log'),
-('HamoodDev', 'Created User []', '2017-08-09 12:15:40', 'log'),
-('test', 'Deleted test&^&s Message.', '2017-08-09 14:04:34', 'log');
 
 -- --------------------------------------------------------
 
@@ -370,13 +211,6 @@ CREATE TABLE `mentions` (
   `taggedid` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `mentions`
---
-
-INSERT INTO `mentions` (`userwhotagged`, `taggeduser`, `postid`, `whotaggedid`, `taggedid`) VALUES
-('HamoodDev', 'test', 258, 1, 6);
-
 -- --------------------------------------------------------
 
 --
@@ -388,10 +222,8 @@ CREATE TABLE `messages` (
   `Title` varchar(15) NOT NULL,
   `Text` varchar(550) NOT NULL,
   `Sender` varchar(45) NOT NULL,
-  `DateTime` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
-  `Section` varchar(7) NOT NULL,
-  `To` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `DateTime` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ;
 
 -- --------------------------------------------------------
 
@@ -404,18 +236,6 @@ CREATE TABLE `mydownloads` (
   `file` varchar(55) NOT NULL,
   `DateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `mydownloads`
---
-
-INSERT INTO `mydownloads` (`username`, `file`, `DateTime`) VALUES
-('BLOODY REIGNS', 'index', '2017-07-22 21:29:13'),
-('HamoodDev', 'dodge_challenger_srt_hellcat_2015-t3', '2017-07-22 22:11:34'),
-('HamoodDev', 'index', '2017-07-23 00:54:49'),
-('HamoodDev', 'download', '2017-07-23 01:20:38'),
-('HamoodDev', 'download', '2017-07-23 01:51:15'),
-('HamoodDev', 'New Text Document', '2017-07-24 11:44:25');
 
 -- --------------------------------------------------------
 
@@ -430,13 +250,6 @@ CREATE TABLE `news` (
   `Poster` varchar(40) NOT NULL,
   `DateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `news`
---
-
-INSERT INTO `news` (`id`, `Title`, `Text`, `Poster`, `DateTime`) VALUES
-(3, 'Test News', 'New Update!', 'HamoodDev', '2017-07-23 02:37:44');
 
 -- --------------------------------------------------------
 
@@ -481,16 +294,8 @@ CREATE TABLE `suggestions` (
   `Author` varchar(45) NOT NULL,
   `Title` varchar(55) NOT NULL,
   `Text` varchar(255) NOT NULL,
-  `DateTime` datetime(6) NOT NULL
+  `DateTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `suggestions`
---
-
-INSERT INTO `suggestions` (`id`, `Author`, `Title`, `Text`, `DateTime`) VALUES
-(12, 'test', 'yrdy', 'yrdy', '2017-08-09 10:02:43.000000'),
-(13, 'Tester', 'test', 'etst', '2017-08-09 10:14:50.000000');
 
 -- --------------------------------------------------------
 
@@ -506,16 +311,6 @@ CREATE TABLE `supporttickets` (
   `id` int(10) UNSIGNED NOT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `supporttickets`
---
-
-INSERT INTO `supporttickets` (`Title`, `Text`, `DateTime`, `By`, `id`, `status`) VALUES
-('tset', 'tsest', '2017-07-22 20:41:43', 'HamoodDev', 3, 'Active'),
-('test', 'testing', '2017-07-22 22:36:34', 'test 2', 4, 'Active'),
-('test', 'tes', '2017-07-23 01:46:45', 'HamoodDev', 5, 'Active'),
-('test', 'teset', '2017-07-23 01:47:33', 'HamoodDev', 6, 'Active');
 
 -- --------------------------------------------------------
 
@@ -546,7 +341,8 @@ INSERT INTO `supportticketsreplies` (`SID`, `Text`, `From`, `MsgType`, `DateTime
 (6, 'test', 'HamoodDev', 'Client', '2017-07-23 01:47:38'),
 (6, 'test', 'HamoodDev', 'Client', '2017-07-23 01:47:47'),
 (6, 'ttest', 'HamoodDev', 'Client', '2017-07-23 01:47:52'),
-(5, 'test', 'HamoodDev', 'Client', '2017-07-23 01:52:14');
+(5, 'test', 'HamoodDev', 'Client', '2017-07-23 01:52:14'),
+(6, 'test', 'HamoodDev', 'Client', '2017-09-25 11:59:21');
 
 -- --------------------------------------------------------
 
@@ -580,13 +376,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `license`, `email`, `customtitle`, `rank`, `img`, `DateJoined`, `country`, `city`, `bio`, `chatbanned`, `theme`, `customindex`, `Banned`, `pcip`, `ps3ip`, `ps3mac`) VALUES
-(1, 'HamoodDev', '1111-1111-1111', 'hamoddev@gmail.com', 'Fuck You Bitch.', 4, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '2017-08-09 14:15:40', 'Ukraine', 'Kiev (Shevchenkivs\'kyi district)', '', 'false', 'purple', 3, 0, 0, 0, ''),
-(2, 'BOT', 'QFMZ-V2QC-YGUE-MFDP', 'admin@admin.com', 'Fuck You Im BOT Bitch.', 4, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '0000-00-00 00:00:00', '', '', '', 'false', 'purple', 2, 1, 0, 0, ''),
-(5, 'BLOODY REIGNS', '7U6B-G5DC-3LPA-4T6D', 'test@gmail.com', '', 1, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '2017-07-22 22:54:10', '', '', '', 'false', 'purple', 10, 0, 0, 0, ''),
-(7, 'PBMODZ', '2744-9GLN-S7ZV-6TK2', 'pbmodz1@pbmodz.com', '', 2, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '2017-07-23 00:34:28', 'Ukraine', 'Kiev (Shevchenkivs\'kyi di', '', 'false', 'purple', 10, 0, 0, 0, ''),
-(12, 'Jason', '2222-2222-2222', '', '', 1, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '2017-07-26 22:17:15', 'Ukraine', 'Kiev (Shevchenkivs\'kyi di', '', 'false', 'purple', 10, 0, 0, 0, ''),
-(13, 'Tester', 'T596-MK3K-EJ5H-NCGV', 'tester@hamooddev.xyz', '', 1, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '2017-08-08 03:45:16', 'Ukraine', 'Kiev (Shevchenkivs\'kyi district)', '', 'false', 'purple', 10, 0, 0, 0, ''),
-(14, 'test', '45J6-X8D4-RW7Q-2Y2P', 'test', '', 1, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '2017-08-09 14:15:40', 'Ukraine', 'Kiev (Shevchenkivs\'kyi district)', '', 'false', 'purple', 10, 0, 0, 0, '');
+(1, 'HamoodDev', '1111-1111-1111', 'hamoddev@gmail.com', 'Fuck You Bitch.', 4, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '2017-08-09 14:15:40', 'Netherlands', 'Amsterdam', '', 'false', 'purple', 3, 0, 0, 0, ''),
+(2, 'BOT', 'QFMZ-V2QC-YGUE-MFDP', 'admin@admin.com', 'Fuck You Im BOT Bitch.', 4, 'https://s-media-cache-ak0.pinimg.com/236x/ae/b3/08/aeb308736b614eb9277ef43983749e3f.jpg', '0000-00-00 00:00:00', '', '', '', 'false', 'purple', 2, 1, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -597,7 +388,7 @@ INSERT INTO `users` (`id`, `username`, `license`, `email`, `customtitle`, `rank`
 CREATE TABLE `user_activity` (
   `username` varchar(40) NOT NULL,
   `text` varchar(255) NOT NULL,
-  `DateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `DateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -646,15 +437,6 @@ ALTER TABLE `emojis`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`),
   ADD KEY `id_2` (`id`);
-
---
--- Indexes for table `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_2` (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `id_3` (`id`);
 
 --
 -- Indexes for table `news`
@@ -708,12 +490,12 @@ ALTER TABLE `activity_options`
 -- AUTO_INCREMENT for table `bugs`
 --
 ALTER TABLE `bugs`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `chat`
 --
 ALTER TABLE `chat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=302;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=309;
 --
 -- AUTO_INCREMENT for table `downloads`
 --
@@ -723,22 +505,22 @@ ALTER TABLE `downloads`
 -- AUTO_INCREMENT for table `emojis`
 --
 ALTER TABLE `emojis`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `suggestions`
 --
 ALTER TABLE `suggestions`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `supporttickets`
 --
 ALTER TABLE `supporttickets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `users`
 --
@@ -748,7 +530,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_activity`
 --
 ALTER TABLE `user_activity`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
