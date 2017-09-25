@@ -265,17 +265,35 @@
 			echo "<li>
                     <i class='fa fa-envelope bg-blue'></i>
                     <div class='timeline-item'>
-                      <span class='time'><i class='fa fa-clock-o'></i> ". $MAIN->time_elapsed_string($row['DateTime']) ."</span>
-
-                      <h3 class='timeline-header'><a href='#'>". $row['Poster'] ."</a></h3>
+                      <h3 class='timeline-header'><a href='#'>". $row['Title'] ."</a></h3>
 					  <div class='timeline-body'>
 					  ". emoticons($row['Text']) ."
                       </div>
 					  <div class='timeline-footer'>
-                        <a class='btn btn-primary btn-xs'>Like</a>
-					    <div class='pull-right'>
-                            <a >500 Likes</a>
-                        </div>
+					       <span class='time'><i class='fa fa-clock-o'></i> ". $MAIN->time_elapsed_string($row['DateTime']) ."</span> By ";
+  		                            $TITTLEE = $row['Poster'];
+  		                            $INDEX = $DB->GetUSER("customindex", $DB->GetUSER("id", $TITTLEE));
+			                        if($INDEX != 0 && $TITTLEE != "") {
+			                        	if($INDEX == 0){
+			                        		echo $TITTLEE;
+			                        	}
+			                        	else if($INDEX == 1){
+			                        		echo "<span style='color:red; text-shadow:2px 2px 4px grey; '><span style='background-image: url(&quot;http://i.imgur.com/G7wALmA.gif&quot;); color: white; font-weight: bold'>". $TITTLEE ."</span></span>";
+			                        	}
+			                        	else if($INDEX == 2){
+			                        		echo "<span style='color: #872657; font-weight: bold;'><span style='text-shadow:1px 1px 0px #01DF01; '><font color='#FF00FF'><b>". $TITTLEE ."</b></font></span></span>";
+			                        	}
+			                        	else if($INDEX == 3){
+			                        		echo "<span style='font-weight: bold; color: #FF8040;'><span style='text-shadow: 0px 0px 0.2em black, 0px 0px 0.2em black, 0px 0px 0.2em black; '>". $TITTLEE ."</span></span>";
+			                        	}
+			                        	else if($INDEX == 55){
+			                        		echo "<span style='color:red; text-shadow:2px 2px 4px grey; '>". $TITTLEE ."</span>";
+			                        	}
+			                        	else {
+			                        		echo $TITTLEE;
+			                        	}
+			                        }
+						   echo "
                       </div>
                     </div>
                   </li>";
